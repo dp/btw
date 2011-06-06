@@ -1,1 +1,39 @@
-/Users/Dave/Documents/sitesketch/public/stylesheets/notifications.css
+#qc-notifications {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    padding: 0;
+    margin: 0;
+}
+
+.qc-notification {
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0);
+    border-bottom: 1px solid #333;
+    /*margin: 0 0 1px 0;*/
+}
+
+.qc-notification:hover {
+    border: 1px solid white;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.qc-notification h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.qc-notification p {
+
+}
+
+.qc-notification.qc-notice-error {
+    background-color: rgba(128,0,0,0.6);
+}
+
+.qc-notification.qc-notice-success {
+    background-color: rgba(0,128,0,0.6);
+}
