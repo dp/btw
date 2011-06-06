@@ -1,0 +1,38 @@
+see some simple examples at http://quietcode.com/btw
+
+create a notifictaion:
+            notify({
+                title: 'Simple Message',
+                msg: 'Everything\'s going well...'
+            });
+
+default delay is 10s. This may be changed by the delay option
+            notify({
+                title: 'Another Message',
+                msg: 'This message has a shorter delay',
+                delay: 3000
+            });
+
+at the moment there are two additional styles; success (green) and error (red).
+            notify({
+                title: 'Update OK',
+                msg: 'Everything went better than expected',
+                style: 'success'
+            });
+
+messages can be updated after they have been displayed. simply keep a reference to the message, then call it's update method.
+            var msg = notify({
+                title: 'Uploading file',
+                msg: 'file is being uploaded to the server',
+                delay: -1 // -1 = display indefinitely
+            });
+
+now, once the file has been uploaded, (or there's an error) we can update the message accordingly
+            msg.update({
+                title: 'File uploaded',
+                msg: 'Your file has been uploaded to the server',
+                delay: 4000,
+                style: 'success'
+            });
+
+
